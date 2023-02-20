@@ -16,3 +16,19 @@ $country = $_POST['country'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
 $createdOn = date('Y-m-d H:i:s');
+
+if (
+    empty($firstName) ||
+    empty($lastName) ||
+    empty($email) ||
+    empty($gender) ||
+    empty($country) ||
+    empty($subject) ||
+    empty($message)
+) {
+    echo json_encode([
+        'status' => 'error',
+        'message' => 'Check all required fields'
+    ]);
+    exit;
+}
