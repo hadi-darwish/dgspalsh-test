@@ -1,1 +1,1 @@
-# dgspalsh-test
+# dgsplash-test
