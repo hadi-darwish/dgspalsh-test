@@ -72,4 +72,54 @@ class Forms
     {
         $this->createdOn = $createdOn;
     }
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+
+    public function getMobile()
+    {
+        return $this->mobile;
+    }
+
+
+    public function getGender()
+    {
+        return $this->gender;
+    }
+
+
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+
+    public function getSubject()
+    {
+        return $this->subject;
+    }
+
+
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+
+    public function getCreatedOn()
+    {
+        return $this->createdOn;
+    }
 }
