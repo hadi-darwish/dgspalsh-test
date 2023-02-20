@@ -20,4 +20,11 @@ class Forms
     protected $subject;
     protected $message;
     protected $createdOn;
+
+
+
+    public function __construct()
+    {
+        $this->database = new Database();
+    }
 }
