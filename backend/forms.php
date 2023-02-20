@@ -122,4 +122,39 @@ class Forms
     {
         return $this->createdOn;
     }
+    public function saveForm()
+    {
+        $connection = $this->database->connect();
+
+
+        $queryText =
+            "INSERT INTO `forms` (
+                `first_name`,
+                `last_name`,
+                `email`,
+                `mobile`,
+                `gender`,
+                `country`,
+                `subject`,
+                `message`,
+                `created_on`
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+        $query = $connection->prepare($queryText);
+        $query->bind_param(
+            'sssssssss',
+            $this->firstName,
+            $this->lastName,
+            $this->email,
+            $this->mobile,
+            $this->gender,
+            $this->country,
+            $this->subject,
+            $this->message,
+            $this->createdOn
+        );
+        $query->execute();
+        $response["success"] = true;
+        echo json_encode($response);
+    }
 }
