@@ -32,3 +32,14 @@ if (
     ]);
     exit;
 }
+$form->setFirstName($firstName);
+$form->setLastName($lastName);
+$form->setEmail($email);
+$form->setMobile($mobile);
+$form->setGender($gender);
+$form->setCountry($country);
+$form->setSubject($subject);
+$form->setMessage($message);
+$form->setCreatedOn($createdOn);
+
+$form->saveForm();
