@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <form class="contact">
+      <h3 class="hidden" id="error-messages"></h3>
+      <div class="inputs">
+        <label>First Name: </label>
+        <input
+          type="text"
+          name="first_name"
+          placeholder="First Name"
+          required
+          id="firstName"
+        />
+      </div>
+      <div class="inputs">
+        <label>Last Name: </label>
+        <input
+          type="text"
+          name="last_name"
+          placeholder="Last Name"
+          required
+          id="lastName"
+        />
+      </div>
+      <div class="inputs">
+        <label>Email: </label>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+          id="email"
+        />
+      </div>
+      <div class="inputs">
+        <label>Mobile: </label>
+        <input type="tel" name="mobile" placeholder="Mobile" />
+      </div>
+      <div class="inputs">
+        <label>Gender: </label>
+        <label>
+          <input type="radio" name="gender" value="male" />
+          Male </label
+        ><label>
+          <input type="radio" name="gender" value="female" />
+          Female </label
+        ><label>
+          <input type="radio" name="gender" value="other" />
+          Other
+        </label>
+      </div>
+      <div class="inputs">
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+          <option value="" selected disabled hidden>Select a country</option>
+          <option value="Lebanon">Lebanon</option>
+          <option value="UAE">UAE</option>
+          <option value="Qatar">Qatar</option>
+          <option value="Dubai">Dubai</option>
+        </select>
+      </div>
+      <div class="inputs">
+        <label for="subject">Subject:</label>
+        <input type="text" name="subject" placeholder="Subject" required />
+      </div>
+      <div class="inputs">
+        <label for="message">Message:</label>
+        <textarea name="message" placeholder="Message" required></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
