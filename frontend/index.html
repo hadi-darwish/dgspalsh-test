@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <div class="contact">
+      <form id="contact">
+        <div class="left">
+          <div class="form-title">
+            <h2>Contact Us</h2>
+          </div>
+          <div class="inputs">
+            <input
+              type="text"
+              name="first_name"
+              placeholder="First Name"
+              required
+              id="firstName"
+            />
+          </div>
+          <div class="inputs">
+            <input
+              type="text"
+              name="last_name"
+              placeholder="Last Name"
+              required
+              id="lastName"
+            />
+          </div>
+
+          <div class="inputs gender">
+            <div class="gender-part">
+              <span>Gender: <br /></span>
+              <div class="radio">
+                <input type="radio" name="gender" value="male" />
+                <label> Male </label>
+              </div>
+            </div>
+            <div class="gender-part">
+              <div class="radio">
+                <input type="radio" name="gender" value="female" />
+                <label> Female </label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="gender" value="other" />
+                <label> Other </label>
+              </div>
+            </div>
+          </div>
+          <div class="inputs">
+            <select id="country" name="country" required>
+              <option value="" selected disabled hidden>
+                Select a country
+              </option>
+              <option value="Lebanon">Lebanon</option>
+              <option value="UAE">UAE</option>
+              <option value="Qatar">Qatar</option>
+              <option value="Dubai">Dubai</option>
+            </select>
+          </div>
+        </div>
+        <div class="right">
+          <div class="inputs">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+              id="email"
+            />
+          </div>
+          <div class="inputs">
+            <input type="tel" name="mobile" placeholder="Mobile" id="mobile" />
+          </div>
+          <div class="inputs">
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              required
+              id="subject"
+            />
+          </div>
+          <div class="inputs">
+            <textarea
+              name="message"
+              placeholder="Message"
+              id="message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" id="send">Submit</button>
+        </div>
+      </form>
+      <h5 class="hidden" id="error"></h5>
+    </div>
+
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
