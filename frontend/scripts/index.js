@@ -12,6 +12,21 @@ const mobile = document.getElementById("mobile");
 let gender = "";
 let error = "";
 
+const checkEmail = () => {
+  if (email.value === "" || email.value == null) {
+    error += "Email is required. \n";
+    return false;
+  } else if (
+    !/(^[\w-\.]{3,})+@(([\w-]{5,})+\.)+[\w-]{2,4}$/.test(email.value)
+  ) {
+    error +=
+      "Please enter email with at least 3 characters before @ and 5 after!!<br>";
+    return false;
+  } else {
+    return true;
+  }
+};
+
 const checkMobile = () => {
   if (mobile.value === "" || mobile.value == null) {
     return true;
