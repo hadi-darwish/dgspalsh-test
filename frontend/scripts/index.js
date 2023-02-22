@@ -24,6 +24,22 @@ send.onclick = () => {
   }
 };
 
+form.addEventListener("submit", function (e) {
+  fetch("http://localhost/dgsplash-test/backend/apis/form-handler.php", {
+    method: "POST",
+    body: new URLSearchParams({
+      first_name: first_name.value,
+      last_name: last_name.value,
+      email: email.value,
+      country: country.value,
+      subject: subject.value,
+      message: message.value,
+      mobile: mobile.value,
+      gender: gender,
+    }),
+  });
+});
+
 const checkEmpty = () => {
   if (first_name.value === "" || first_name.value == null) {
     error += "First name is required. \n";
