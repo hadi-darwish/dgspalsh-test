@@ -12,6 +12,28 @@ const mobile = document.getElementById("mobile");
 let gender = "";
 let error = "";
 
+const checkEmpty = () => {
+  if (first_name.value === "" || first_name.value == null) {
+    error += "First name is required. \n";
+  }
+  if (last_name.value === "" || last_name.value == null) {
+    error += "Last name is required. \n";
+  }
+  if (country.value === "" || country.value == null) {
+    error += "Country is required. \n";
+  }
+  if (subject.value === "" || subject.value == null) {
+    error += "Subject is required. \n";
+  }
+  if (message.value === "" || message.value == null) {
+    error += "Message is required. \n";
+  }
+  checkGender();
+  if (gender === "") {
+    error += "Gender is required. \n";
+  }
+};
+
 const checkEmail = () => {
   if (email.value === "" || email.value == null) {
     error += "Email is required. \n";
