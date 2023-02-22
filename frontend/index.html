@@ -7,8 +7,8 @@
     <title>Forms</title>
   </head>
   <body>
-    <form class="contact">
-      <h3 class="hidden" id="error-messages"></h3>
+    <form class="contact" id="contact">
+      <h3 class="hidden" id="error"></h3>
       <div class="inputs">
         <label>First Name: </label>
         <input
@@ -41,7 +41,7 @@
       </div>
       <div class="inputs">
         <label>Mobile: </label>
-        <input type="tel" name="mobile" placeholder="Mobile" />
+        <input type="tel" name="mobile" placeholder="Mobile" id="mobile" />
       </div>
       <div class="inputs">
         <label>Gender: </label>
@@ -68,13 +68,27 @@
       </div>
       <div class="inputs">
         <label for="subject">Subject:</label>
-        <input type="text" name="subject" placeholder="Subject" required />
+        <input
+          type="text"
+          name="subject"
+          placeholder="Subject"
+          required
+          id="subject"
+        />
       </div>
       <div class="inputs">
         <label for="message">Message:</label>
-        <textarea name="message" placeholder="Message" required></textarea>
+        <textarea
+          name="message"
+          placeholder="Message"
+          id="message"
+          cols="30"
+          rows="10"
+          required
+        ></textarea>
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" id="send">Submit</button>
     </form>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
