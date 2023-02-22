@@ -47,3 +47,5 @@
 create a database that is named dgsplashdb in mysql
 
 place backend folder in htdcos xammp folder
+
+edit your user and database password in database class of backend
