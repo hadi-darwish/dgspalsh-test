@@ -12,6 +12,18 @@ const mobile = document.getElementById("mobile");
 let gender = "";
 let error = "";
 
+const checkMobile = () => {
+  if (mobile.value === "" || mobile.value == null) {
+    return true;
+  } else if (!/^(\+961)([1-9]|70|71|76|78|79|81)\d{6}$/.test(mobile.value)) {
+    error +=
+      "Please enter Lebanese mobile number with country code +961 and if ur number starts with 0x enter it as +961xyyyyyy !!";
+    return false;
+  } else {
+    return true;
+  }
+};
+
 const checkGender = () => {
   for (const element of selectedRadio) {
     if (element.checked) {
