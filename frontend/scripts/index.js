@@ -11,6 +11,18 @@ const send = document.getElementById("send");
 const mobile = document.getElementById("mobile");
 let gender = "";
 let error = "";
+send.onclick = () => {
+  error = "";
+  errorElement.style.display = "none";
+  checkEmpty();
+  checkEmail();
+  checkMobile();
+  if (error !== "") {
+    errorElement.innerText = error;
+    errorElement.style.display = "block";
+    return false;
+  }
+};
 
 const checkEmpty = () => {
   if (first_name.value === "" || first_name.value == null) {
