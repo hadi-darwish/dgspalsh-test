@@ -11,3 +11,11 @@ const send = document.getElementById("send");
 const mobile = document.getElementById("mobile");
 let gender = "";
 let error = "";
+
+const checkGender = () => {
+  for (const element of selectedRadio) {
+    if (element.checked) {
+      gender = element.value;
+    }
+  }
+};
